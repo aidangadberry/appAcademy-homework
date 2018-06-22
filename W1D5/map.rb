@@ -37,6 +37,8 @@ class Map
   end
 
   def show
-    
+    @map.each do |pair|
+      puts "#{pair.first} => #{pair.last}"
+    end
   end
 end
