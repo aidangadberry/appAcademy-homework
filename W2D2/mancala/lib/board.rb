@@ -41,6 +41,10 @@ class Board
   end
 
   def one_side_empty?
+    bottom_count = cups[0..5].inject(0) { |acc, cup| acc += cup.length }
+    top_count = cups[7..12].inject(0) { |acc, cup| acc += cup.length }
+
+    bottom_count == 0 || top_count == 0
   end
 
   def winner
