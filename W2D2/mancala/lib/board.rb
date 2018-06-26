@@ -13,13 +13,14 @@ class Board
         my_cups << []
         next
       end
-      my_cups[cup_num] = [0, 0, 0, 0]
+      my_cups[cup_num] = [:stone, :stone, :stone, :stone]
     end
 
     my_cups
   end
 
   def valid_move?(start_pos)
+
   end
 
   def make_move(start_pos, current_player_name)
