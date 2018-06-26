@@ -3,6 +3,8 @@ class Board
 
   def initialize(name1, name2)
     @cups = place_stones
+    @name1 = name1
+    @name2 = name2
   end
 
   def place_stones
@@ -48,5 +50,8 @@ class Board
   end
 
   def winner
+    return @name1 if cups[6].length > cups[13].length
+    return @name2 if cups[6].length < cups[13].length
+    :draw
   end
 end
